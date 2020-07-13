@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiplayer Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMu7aFw_9VZF6nD5h803KE9Nroue1ksOQ",
+        authDomain: "creating-the-own-game.firebaseapp.com",
+        databaseURL: "https://creating-the-own-game.firebaseio.com",
+        projectId: "creating-the-own-game",
+        storageBucket: "creating-the-own-game.appspot.com",
+        messagingSenderId: "1016689619645",
+        appId: "1:1016689619645:web:86808f3a279f9529d8bdd4"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/Player.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Game.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+
+    <div class="startScreen">GO</div>
+
+    <div class="container hide">
+      <h1>JS LUDO</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img src="images/dice1.png" id="check1" class="image1">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img src="images/dice2.png" id="check2" class="image2">
+      </div>
+
+      <button onclick="ludoGame1()" class="button1">Click ME</button>
+      <button  onclick="ludoGame2()" class="button2">Click ME</button>
+      
+    </div>
+
+  </body>
+</html>
